@@ -10,26 +10,33 @@ export default function App() {
   const handleAddItem = ({ name, isFolder, parentId }) => {
     const newItem = { id: idCounter, name, isFolder };
 
-    const addToTree = (items) => {
-      return items.map((item) => {
-        if (item.id === parentId) {
-          const children = item.children || [];
-          return {
-            ...item,
-            children: [...children, newItem],
-          };
-        }
-        if (item.children) {
-          return {
-            ...item,
-            children: addToTree(item.children),
-          };
-        }
-        return item;
-      });
-    };
+    if (parentId === null) {
+      // Add to root level
+      setData((prev) => [...prev, newItem]);
+    } else {
+      // Add to specific parent
+      const addToTree = (items) => {
+        return items.map((item) => {
+          if (item.id === parentId) {
+            const children = item.children || [];
+            return {
+              ...item,
+              children: [...children, newItem],
+            };
+          }
+          if (item.children) {
+            return {
+              ...item,
+              children: addToTree(item.children),
+            };
+          }
+          return item;
+        });
+      };
 
-    setData((prev) => addToTree(prev));
+      setData((prev) => addToTree(prev));
+    }
+
     setIdCounter((prev) => prev + 1);
   };
 
