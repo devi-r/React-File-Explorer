@@ -16,17 +16,23 @@ Live Preview: https://react-file-explorer.onrender.com
 - **Expand/Collapse Functionality**  
   Each folder includes toggle icons to expand or collapse its contents.
 
+- **Add Root Folder**
+  Allows users to create a new folder directly at the root level.
+
+- **Add Root File**
+  Users can add a standalone file at the root level.
+
 - **Add Items**  
   Users can dynamically add a file or folder inside any existing folder.
 
 - **Remove Items**  
   Users can delete files or folders from any level of the hierarchy.
 
+- **Empty State Handling**
+  If all items are deleted, a message is shown prompting users to add new content.
+
 - **State Management**  
   The file tree is managed using React’s `useState`. All updates propagate cleanly through the recursive structure.
-
-- **Minimal Styling**  
-  Clean and readable layout using inline styles and icons to enhance user experience.
 
 ---
 
