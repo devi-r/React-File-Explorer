@@ -1,6 +1,6 @@
-# React File Explorer
+# React File Explorer (Nested Tree Structure)
 
-This project implements a **dynamic and recursive file explorer** component in React. It mimics the behavior of a typical file system viewer, where folders can be expanded or collapsed, and users can add or remove items at any level of the hierarchy.
+This project implements a **dynamic and recursive file explorer** component in React using a nested tree data structure. It mimics the behavior of a traditional file system viewer, where each folder can contain an array of children (either folders or files), enabling deep recursive nesting.
 
 ## Demo
 
