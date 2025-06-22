@@ -60,13 +60,13 @@ Live Preview: https://react-file-explorer.onrender.com
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/devi-r/React-File-Explorer.git
+   git clone https://github.com/devi-r/React-File-Explorer-Nested-Tree.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd React-File-Explorer
+   cd React-File-Explorer-Nested-Tree
    ```
 
 3. Install the dependencies:
